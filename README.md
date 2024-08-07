@@ -1,4 +1,5 @@
 # verifier.tokyo
+
 Decode and verify Verifiable Credentials, like jwt.io
 
 ## Implementation Details
@@ -35,17 +36,20 @@ This project is a static web site that decodes and verifies Verifiable Credentia
 ### Building the Project
 
 1. Clone the repository:
+
    ```sh
    git clone https://github.com/laysakura/verifier.tokyo.git
    cd verifier.tokyo
    ```
 
 2. Build the Rust project:
+
    ```sh
    wasm-pack build
    ```
 
 3. Serve the static files (you can use any static file server, here we use `http-server`):
+
    ```sh
    npm install -g http-server
    http-server
