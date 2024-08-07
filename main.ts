@@ -1,11 +1,10 @@
+import init, { fetch_content, decode_and_verify_vc } from './pkg/verifier_tokyo';
+
 async function fetchContent() {
     try {
-        const response = await fetch('https://example.com/');
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        const text = await response.text();
-        document.getElementById('content').innerText = text;
+        await init();
+        const content = await fetch_content();
+        document.getElementById('content').innerText = content;
     } catch (error) {
         console.error('Fetch error:', error);
         document.getElementById('content').innerText = 'Failed to load content';
